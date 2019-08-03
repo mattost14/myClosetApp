@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/Nubank_Logo.png';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import IconMI from 'react-native-vector-icons/MaterialIcons';
+import IconMCI from 'react-native-vector-icons/MaterialCommunityIcons';
 import  { Container, Top, Logo, Title}  from './styles';
 
 
@@ -8,10 +9,11 @@ export default function Header(){
     return(
         <Container>
             <Top>
-                <Logo source={logo}/>
-                <Title>My Header</Title>
+                {/*<Logo source={logo}/> -->*/}
+                <IconMCI name='hanger' size={30} color="#FFF"/>
+                <Title>My Closet</Title>
             </Top>
-            <Icon name='keyboard-arrow-down' size={20} color="#FFF"/>
+            <IconMI name='keyboard-arrow-down' size={20} color="#FFF"/>
         </Container>
     );
 }
