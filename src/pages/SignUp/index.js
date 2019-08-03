@@ -1,16 +1,16 @@
 import React from  'react';
 
 import  Header from '../../components/Header';
-import  LoginForm from '../../components/LoginForm';
+import  SignupForm from '../../components/SignupForm';
 
 
 import { Container } from './styles';
 
-export default function Login(){
+export default function Login(props){
     return (
         <Container>
             <Header />
-            <LoginForm />
+            <SignupForm />
         </Container>
     );
 }

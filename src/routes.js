@@ -4,10 +4,12 @@ import Receita from './pages/Receita';
 import Despesas from './pages/Despesas';
 import Main from './pages/Main';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const Routes = createAppContainer(createSwitchNavigator({
-        Login,
-        Main    
+    SignUp,
+    Main,    
+    Login, 
 }));
 
 export default Routes;

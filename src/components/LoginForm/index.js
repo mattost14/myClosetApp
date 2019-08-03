@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import logo from '../../assets/Nubank_Logo.png';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import  { Container, Input, LoginButton, LoginButtonText }  from './styles';
+import  { Container, Input, LoginButton, LoginButtonText, ErrorText, SignUpButton, SignUpButtonText }  from './styles';
 import firebase from 'react-native-firebase';
 import { useNavigation } from 'react-navigation-hooks';
 
@@ -36,13 +36,15 @@ export default function LoginForm(){
 
     return(
         <Container>
+            {isAuthenticated ?  null : <ErrorText>{errorMsg}</ErrorText> }
             <Input placeholder="Email" autoCapitalize = 'none' onChangeText={email => setEmail(email)} value={Email}/>
             <Input placeholder="Password" secureTextEntry={true} onChangeText={pass => setPass(pass)} value={Pass}/>
             <LoginButton onPress={trylogin}>
                 <LoginButtonText>Login</LoginButtonText>
             </LoginButton >
-            {isAuthenticated ? null : <LoginButtonText>{errorMsg}</LoginButtonText> }
-            
+            <SignUpButton onPress={()=>{navigate('Signup')}}>
+                <SignUpButtonText>Sign Up</SignUpButtonText>
+            </SignUpButton>    
         </Container>
     );
 
