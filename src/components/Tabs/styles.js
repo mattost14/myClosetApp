@@ -49,3 +49,6 @@ export const AddButton = styled.TouchableOpacity`
     align-items: center;
     border-radius: 25;
 `;
+
+export const TabItemButton = styled.TouchableOpacity`
+`;

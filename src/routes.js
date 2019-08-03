@@ -1,4 +1,4 @@
-import { createStackNavigator, createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator, createDrawerNavigator, createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 
 import Receita from './pages/Receita';
 import Despesas from './pages/Despesas';
@@ -6,9 +6,9 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
-const Routes = createAppContainer(createSwitchNavigator({
-    SignUp,
-    Main,    
+const Routes = createAppContainer(createDrawerNavigator({
+    Main,
+    SignUp,    
     Login, 
 }));
 
