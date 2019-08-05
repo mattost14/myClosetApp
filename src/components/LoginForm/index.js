@@ -20,11 +20,7 @@ export default function LoginForm(){
 
     async function trylogin(){
         try{
-            console.log('Try to loggin:');
-            console.log(Email);
-            console.log(Pass)
             const user = await firebase.auth().signInWithEmailAndPassword(Email,Pass);
-
             setAuthenticationStatus(true);
         }
         catch (err){

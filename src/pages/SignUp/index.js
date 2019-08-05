@@ -6,7 +6,7 @@ import  SignupForm from '../../components/SignupForm';
 
 import { Container } from './styles';
 
-export default function Login(props){
+export default function Login(){
     return (
         <Container>
             <Header />

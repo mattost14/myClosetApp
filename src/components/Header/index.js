@@ -5,7 +5,7 @@ import IconMCI from 'react-native-vector-icons/MaterialCommunityIcons';
 import  { Container, Top, Logo, Title}  from './styles';
 
 
-export default function Header(){
+export default function Header(user){
     return(
         <Container>
             <Top>
